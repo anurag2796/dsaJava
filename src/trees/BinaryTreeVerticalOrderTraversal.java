@@ -6,7 +6,7 @@ public class BinaryTreeVerticalOrderTraversal {
     /**
      * Definition for a binary tree node.
      */
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
@@ -18,7 +18,7 @@ public class BinaryTreeVerticalOrderTraversal {
             this.right = right;
         }
     }
-    public class Pair<K, V> {
+    public static class Pair<K, V> {
         private K key;
         private V value;
 
@@ -48,11 +48,11 @@ public class BinaryTreeVerticalOrderTraversal {
             map.putIfAbsent(index, new ArrayList<>());
             map.get(index).add(node.val);
             if(node.left != null){
-                queue.add(new Pair<>(node.left, index-1));
+                queue.add(new Pair<>(node.left, index - 1));
                 min = Math.min(min, index-1);
             }
             if(node.right != null){
-                queue.add(new Pair<>(node.right, index+1));
+                queue.add(new Pair<>(node.right, index + 1));
                 max = Math.max(max, index+1);
             }
         }
