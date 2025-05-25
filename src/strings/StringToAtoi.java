@@ -1,6 +1,14 @@
 package strings;
 
+/**
+ * Question:
+ * Implement the `myAtoi(string s)` function, which converts a string to a 32-bit signed integer (similar to C/C++'s atoi function).
+ * The function discards leading whitespace, handles optional '+' or '-' sign, reads in digits until a non-digit is found,
+ * and clamps the result within the 32-bit signed integer range: [−2^31, 2^31 − 1].
+ * If no valid conversion can be performed, return 0.
+ */
 class StringToAtoi {
+
     public int myAtoi(String s) {
         s= s.trim();
         int result = 0, sign = 1;
